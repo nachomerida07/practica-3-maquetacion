@@ -1,33 +1,240 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Práctica 3</title>
-    <link rel="stylesheet" href="stylesgit add ..css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ProShop Golf - Equipamiento Avanzado</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="top-banner">
+      Envíos gratuitos a península en pedidos superiores a 150€
+    </div>
+
     <header class="cabecera">
-        <h1>Mi Diseño Web</h1>
-        <nav>
-            <a href="#contacto">Contacto</a>
-        </nav>
+      <div class="logo">
+        <h1>ProShop Ignacio</h1>
+        <span>Córdoba</span>
+      </div>
+      <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#tienda">Catálogo</a>
+        <a href="#simulador">Estudio</a>
+        <a href="#contacto">Reservas</a>
+      </nav>
     </header>
+
     <main>
-        <section class="contenido-flex">
-            <div class="caja">Sección 1 del diseño</div>
-            <div class="caja">Sección 2 del diseño</div>
-        </section>
-        <section id="contacto" class="seccion-formulario">
-            <h2>Formulario de contacto</h2>
-            <form action="#" method="POST">
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <button type="submit">Enviar</button>
-            </form>
-        </section>
+      <section id="inicio" class="hero">
+        <div class="hero-texto">
+          <h2>Baja tu hándicap con material ajustado a tus métricas</h2>
+          <p>
+            Especialistas en configuración de varillas y fitting. Encuentra
+            desde palos a medida hasta la ropa de lino que usas en la casa club.
+          </p>
+          <a href="#tienda" class="btn-principal">Explorar material</a>
+        </div>
+        <div class="hero-decoracion">
+          <img
+            src="Imagenes Figma/villares.jpeg"
+            alt="Real Club de Campo de Córdoba"
+            class="img-fondo"
+          />
+          <div class="caja-acento"></div>
+        </div>
+      </section>
+
+      <section id="marcas" class="marcas">
+        <div class="contenedor-marcas">
+          <span>Titleist</span>
+          <span>Callaway</span>
+          <span>Scotty Cameron</span>
+          <span>Peter Millar</span>
+        </div>
+      </section>
+
+      <section id="tienda">
+        <div class="cabecera-seccion">
+          <h2>Selección del Pro</h2>
+          <p>El equipamiento exacto que utilizamos en nuestros torneos.</p>
+        </div>
+        <div class="grid-productos">
+          <article class="producto">
+            <div class="etiqueta">Top Ventas</div>
+            <img
+              src="Imagenes Figma/tsi3.jpg"
+              alt="Driver Titleist TSi3"
+              class="img-producto"
+            />
+            <div class="producto-info">
+              <h3>Driver Titleist TSi3</h3>
+              <p>Ajuste preciso del centro de gravedad.</p>
+              <div class="precio-fila">
+                <span class="precio">549,00 €</span>
+                <a href="#detalle" class="enlace-simple">Ver más →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="producto">
+            <img
+              src="Imagenes Figma/scotty.jpg"
+              alt="Putter Scotty Cameron"
+              class="img-producto"
+            />
+            <div class="producto-info">
+              <h3>Putter Scotty Cameron</h3>
+              <p>Newport 2 con varilla LA Golf.</p>
+              <div class="precio-fila">
+                <span class="precio">720,00 €</span>
+                <a href="#detalle" class="enlace-simple">Ver más →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="producto">
+            <img
+              src="Imagenes Figma/polo.png"
+              alt="Polo Peter Millar"
+              class="img-producto"
+            />
+            <div class="producto-info">
+              <h3>Polo Peter Millar</h3>
+              <p>Summer Comfort elástico y transpirable.</p>
+              <div class="precio-fila">
+                <span class="precio">95,00 €</span>
+                <a href="#detalle" class="enlace-simple">Ver más →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="producto">
+            <div class="etiqueta oscura">Básico</div>
+            <img
+              src="Imagenes Figma/grips.webp"
+              alt="Grips Golf Pride Tour Velvet"
+              class="img-producto"
+            />
+            <div class="producto-info">
+              <h3>Grip Golf Pride</h3>
+              <p>Tour Velvet ALIGN MAX Midsize.</p>
+              <div class="precio-fila">
+                <span class="precio">15,00 €</span>
+                <a href="#detalle" class="enlace-simple">Ver más →</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="detalle" class="detalle-producto">
+        <div class="producto-layout-flex">
+          <div class="columna-imagen">
+            <img
+              src="Imagenes Figma/tsi3.jpg"
+              alt="Driver Titleist TSi3"
+              class="img-grande"
+            />
+          </div>
+          <div class="columna-info">
+            <span class="categoria">Maderas de salida</span>
+            <h2>Driver Titleist TSi3 <span>Custom</span></h2>
+            <p class="precio-destacado">549,00 €</p>
+            <p class="descripcion-larga">
+              Montado específicamente con varilla Graphite Design Tour AD VF 6X.
+              La cabeza de titanio aeroespacial combinada con el raíl de ajuste
+              perimetral te permite neutralizar el fade o potenciar el draw
+              según tu dinámica de impacto.
+            </p>
+            <ul class="lista-specs">
+              <li>Cuello SureFit con 16 configuraciones de loft y lie</li>
+              <li>Cara ATI 425 de titanio forjado</li>
+              <li>Funda de cuero premium incluida</li>
+            </ul>
+            <div class="acciones-compra">
+              <button class="btn-principal">Añadir al carrito</button>
+              <button class="btn-secundario">Consultar stock</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="simulador" class="simulador-seccion">
+        <div class="simulador-texto">
+          <h2>Fitting Avanzado en el Real Club</h2>
+          <p>
+            Usamos el Trackman 4 con E6 Connect para registrar tu velocidad de
+            cabeza, ángulo de ataque y eficiencia. Ven a probar diferentes
+            configuraciones antes de salir al campo.
+          </p>
+        </div>
+
+        <div class="simulador-imagen">
+          <img
+            src="Imagenes Figma/trackman-4.webp"
+            alt="Monitor Trackman"
+            class="img-simulador"
+          />
+          <div class="bloque-color"></div>
+        </div>
+      </section>
+
+      <section id="contacto" class="contacto-seccion">
+        <div class="contacto-grid">
+          <div class="contacto-info">
+            <h2>Hablemos de tu bolsa</h2>
+            <p>
+              Escríbenos para organizar una sesión de fitting, pedir presupuesto
+              o consultar dudas sobre tu pedido.
+            </p>
+          </div>
+          <form action="#" method="post" class="formulario">
+            <div class="input-fila">
+              <div class="grupo-input">
+                <label for="nombre">Tu nombre</label>
+                <input type="text" id="nombre" name="nombre" required />
+              </div>
+              <div class="grupo-input">
+                <label for="email">Tu correo</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+            </div>
+            <div class="grupo-input">
+              <label for="asunto">¿Qué necesitas?</label>
+              <select id="asunto" name="asunto">
+                <option value="fitting">Reserva de fitting con radar</option>
+                <option value="presupuesto">Solicitud de presupuesto</option>
+                <option value="compras">Dudas sobre material</option>
+              </select>
+            </div>
+            <div class="grupo-input">
+              <label for="mensaje">Mensaje</label>
+              <textarea
+                id="mensaje"
+                name="mensaje"
+                rows="4"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="btn-principal ancho-completo">
+              Enviar consulta
+            </button>
+          </form>
+        </div>
+      </section>
     </main>
-</body>
+
+    <footer>
+      <div class="footer-contenido">
+        <h2>ProShop Ignacio</h2>
+        <p>Práctica 3 Maquetación Web</p>
+      </div>
+    </footer>
+  </body>
 </html>

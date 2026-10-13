@@ -1,0 +1,488 @@
+:root {
+    --verde-club: #143628;
+    --arena-fondo: #f4f2ee;
+    --dorado: #b89868;
+    --texto-oscuro: #1c1c1c;
+    --texto-claro: #666666;
+    --blanco: #ffffff;
+    --borde: #dcd7ce;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--arena-fondo);
+    color: var(--texto-oscuro);
+    line-height: 1.6;
+}
+
+.top-banner {
+    background-color: var(--dorado);
+    color: var(--verde-club);
+    text-align: center;
+    padding: 0.5rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cabecera {
+    background-color: var(--arena-fondo);
+    padding: 1.5rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--verde-club);
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+    color: var(--verde-club);
+    line-height: 1;
+}
+
+.logo span {
+    font-size: 0.8rem;
+    color: var(--texto-claro);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+nav a {
+    color: var(--texto-oscuro);
+    text-decoration: none;
+    margin-left: 2rem;
+    font-weight: 500;
+    font-size: 0.95rem;
+    position: relative;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: var(--verde-club);
+    transition: width 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+main {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+section {
+    padding: 6rem 0;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    padding: 4rem 0 6rem 0;
+}
+
+.hero-texto {
+    flex: 1;
+}
+
+.hero-texto h2 {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    color: var(--verde-club);
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.hero-texto p {
+    font-size: 1.2rem;
+    color: var(--texto-claro);
+    margin-bottom: 2.5rem;
+    max-width: 90%;
+}
+
+.hero-decoracion {
+    flex: 1;
+    height: 450px;
+    position: relative;
+}
+
+.caja-acento {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--dorado);
+    top: 20px;
+    left: -20px;
+    z-index: 0;
+}
+
+.marcas {
+    padding: 0;
+}
+
+.contenedor-marcas {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid var(--borde);
+    border-bottom: 1px solid var(--borde);
+    padding: 2rem 0;
+    color: var(--texto-claro);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cabecera-seccion {
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.cabecera-seccion h2 {
+    font-size: 2.5rem;
+    color: var(--verde-club);
+}
+
+.grid-productos {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.producto {
+    background-color: var(--blanco);
+    flex: 1;
+    min-width: 280px;
+    border: 1px solid var(--borde);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.etiqueta {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background-color: var(--dorado);
+    color: var(--verde-club);
+    padding: 0.3rem 0.8rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    z-index: 2;
+}
+
+.etiqueta.oscura {
+    background-color: var(--verde-club);
+    color: var(--blanco);
+}
+
+.img-producto {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-bottom: 1px solid var(--borde);
+}
+
+.producto-info {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.producto-info h3 {
+    font-size: 1.1rem;
+    color: var(--verde-club);
+    margin-bottom: 0.5rem;
+}
+
+.producto-info p {
+    font-size: 0.9rem;
+    color: var(--texto-claro);
+    flex-grow: 1;
+    margin-bottom: 1.5rem;
+}
+
+.precio-fila {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--borde);
+    padding-top: 1rem;
+}
+
+.precio {
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.enlace-simple {
+    color: var(--verde-club);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.producto-layout-flex {
+    display: flex;
+    background-color: var(--verde-club);
+    color: var(--blanco);
+    border: 1px solid var(--verde-club);
+}
+
+.columna-imagen {
+    flex: 1;
+    min-width: 300px;
+}
+
+.img-grande {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.columna-info {
+    flex: 1;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.categoria {
+    color: var(--dorado);
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+}
+
+.columna-info h2 {
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.1;
+}
+
+.columna-info h2 span {
+    color: var(--dorado);
+    font-style: italic;
+}
+
+.precio-destacado {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+}
+
+.descripcion-larga {
+    color: #a3b1ab;
+    margin-bottom: 2rem;
+}
+
+.lista-specs {
+    list-style: none;
+    margin-bottom: 3rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 2rem;
+}
+
+.lista-specs li {
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    position: relative;
+    color: #d1d8d5;
+}
+
+.lista-specs li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 6px;
+    height: 6px;
+    background-color: var(--dorado);
+}
+
+.acciones-compra {
+    display: flex;
+    gap: 1rem;
+}
+
+.simulador-seccion {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+    border-top: 1px solid var(--borde);
+    border-bottom: 1px solid var(--borde);
+    padding: 4rem 0;
+}
+
+.simulador-texto {
+    flex: 1;
+}
+
+.simulador-texto h2 {
+    font-size: 2.5rem;
+    color: var(--verde-club);
+    margin-bottom: 1.5rem;
+}
+
+.simulador-imagen {
+    flex: 1;
+    height: 350px;
+    position: relative;
+    background-color: transparent;
+}
+
+.bloque-color {
+    position: absolute;
+    width: 60%;
+    height: 120%;
+    background-color: var(--dorado);
+    top: -10%;
+    right: 20px;
+}
+
+.contacto-grid {
+    display: flex;
+    gap: 4rem;
+}
+
+.contacto-info {
+    flex: 1;
+}
+
+.contacto-info h2 {
+    font-size: 2.5rem;
+    color: var(--verde-club);
+    margin-bottom: 1.5rem;
+}
+
+.formulario {
+    flex: 1.5;
+    background-color: var(--blanco);
+    padding: 3rem;
+    border: 1px solid var(--borde);
+}
+
+.input-fila {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.input-fila .grupo-input {
+    flex: 1;
+}
+
+.grupo-input {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: var(--texto-claro);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+input, textarea, select {
+    padding: 1rem;
+    border: none;
+    border-bottom: 2px solid var(--borde);
+    background-color: transparent;
+    font-family: 'Outfit', sans-serif;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-bottom-color: var(--verde-club);
+}
+
+.btn-principal {
+    background-color: var(--verde-club);
+    color: var(--blanco);
+    padding: 1rem 2.5rem;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-secundario {
+    background-color: transparent;
+    color: var(--blanco);
+    padding: 1rem 2.5rem;
+    border: 1px solid var(--blanco);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.ancho-completo {
+    width: 100%;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+footer {
+    background-color: var(--verde-club);
+    color: var(--blanco);
+    padding: 4rem 2rem;
+    text-align: center;
+    border-top: 5px solid var(--dorado);
+}
+
+.footer-contenido h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.img-fondo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.img-simulador {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background-color: var(--blanco);
+    padding: 2rem;
+    position: relative;
+    z-index: 1;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
