@@ -190,7 +190,23 @@ section {
     text-transform: uppercase;
     z-index: 2;
 }
+.licencia-cc {
+    margin-top: 1.5rem;
+    font-size: 0.85rem;
+    color: #d1d8d5;
+}
 
+.licencia-cc a {
+    color: var(--dorado);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.licencia-cc img {
+    height: 18px;
+    vertical-align: middle;
+    margin-left: 4px;
+}
 .etiqueta.oscura {
     background-color: var(--verde-club);
     color: var(--blanco);
